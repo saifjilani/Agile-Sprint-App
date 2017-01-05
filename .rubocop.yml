@@ -1,0 +1,11 @@
+Metrics/LineLength:
+  Max: 120
+Documentation:
+  Enabled: false
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+    - 'Gemfile'
+    - 'config/environments/production.rb'
+    - 'config/puma.rb'
+    - 'test/test_helper.rb'
