@@ -1,5 +1,7 @@
 # README
 
+[![CircleCI](https://circleci.com/gh/saifjilani/Agile-Sprint-App.svg?style=svg)](https://circleci.com/gh/saifjilani/Agile-Sprint-App)
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
