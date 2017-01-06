@@ -14,19 +14,19 @@ ActiveRecord::Schema.define(version: 20170106175132) do
 
   create_table "features", force: :cascade do |t|
     t.integer  "sprint_id"
-    t.integer  "rank"
-    t.decimal  "estimated_total_hours"
-    t.decimal  "estimated_remaining_hours"
-    t.decimal  "actual_worked_hours"
+    t.integer  "rank",                      null: false
+    t.decimal  "estimated_total_hours",     null: false
+    t.decimal  "estimated_remaining_hours", null: false
+    t.decimal  "actual_worked_hours",       null: false
     t.datetime "created_at",                null: false
     t.datetime "updated_at",                null: false
     t.index ["sprint_id"], name: "index_features_on_sprint_id"
   end
 
   create_table "sprints", force: :cascade do |t|
-    t.string   "title"
-    t.date     "start_date"
-    t.date     "end_date"
+    t.string   "title",      null: false
+    t.date     "start_date", null: false
+    t.date     "end_date",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
