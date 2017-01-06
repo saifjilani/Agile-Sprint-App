@@ -1,13 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+regular_feature:
+  sprint: regular_sprint
   rank: 1
-  estimated_total_hours: 9.99
-  estimated_remaining_hours: 9.99
-  actual_worked_hours: 9.99
+  estimated_total_hours: 8
+  estimated_remaining_hours: 4
+  actual_worked_hours: 6.5
 
-two:
-  rank: 1
-  estimated_total_hours: 9.99
-  estimated_remaining_hours: 9.99
-  actual_worked_hours: 9.99
