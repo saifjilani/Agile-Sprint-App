@@ -1,15 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  auth_provider: MyString
-  uid: MyString
-  name: MyString
-  image_url: MyString
-  url: MyString
-
-two:
-  auth_provider: MyString
-  uid: MyString
-  name: MyString
-  image_url: MyString
-  url: MyString
+regular_user:
+  auth_provider: provider
+  uid: 0000
+  name: regular_user
+  image_url: image.com
+  url: provider.com

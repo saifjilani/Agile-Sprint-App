@@ -2,6 +2,7 @@
 
 regular_feature:
   sprint: regular_sprint
+  title: regular_feature
   rank: 1
   estimated_total_hours: 8
   estimated_remaining_hours: 4
