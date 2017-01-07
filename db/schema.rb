@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20170107052443) do
 
   create_table "features", force: :cascade do |t|
     t.integer  "sprint_id"
+    t.string   "title"
     t.integer  "rank",                      null: false
     t.decimal  "estimated_total_hours",     null: false
     t.decimal  "estimated_remaining_hours", null: false
