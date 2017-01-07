@@ -4,7 +4,6 @@ one:
   auth_provider: MyString
   uid: MyString
   name: MyString
-  location: MyString
   image_url: MyString
   url: MyString
 
@@ -12,6 +11,5 @@ two:
   auth_provider: MyString
   uid: MyString
   name: MyString
-  location: MyString
   image_url: MyString
   url: MyString

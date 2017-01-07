@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20170107052443) do
     t.string   "auth_provider", null: false
     t.string   "uid",           null: false
     t.string   "name"
-    t.string   "location"
     t.string   "image_url"
     t.string   "url"
     t.datetime "created_at",    null: false

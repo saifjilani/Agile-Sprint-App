@@ -4,7 +4,6 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.string :auth_provider, null: false
       t.string :uid, null: false
       t.string :name
-      t.string :location
       t.string :image_url
       t.string :url
 
