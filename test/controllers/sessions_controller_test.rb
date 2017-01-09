@@ -5,7 +5,8 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     OmniAuth.config.test_mode = true
     assert_difference('User.count') do
       login(login_data)
-      assert_equal 'Welcome, #{@user.name}', flash[:success]
+      name = login_data[:data][:info][:name]
+      assert_equal "Welcome, #{name}", flash[:success]
     end
   end
 
