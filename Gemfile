@@ -37,7 +37,7 @@ gem 'bootstrap-sass'
 # Use Facebook omniauth for oauth login
 gem 'omniauth-facebook'
 # Use Google omniauth for oauth login
-gem "omniauth-google-oauth2"
+gem 'omniauth-google-oauth2'
 # Use figaro to set environment variables
 gem 'figaro'
 

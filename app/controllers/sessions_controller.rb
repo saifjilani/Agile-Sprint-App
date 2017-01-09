@@ -8,7 +8,6 @@ class SessionsController < ApplicationController
       flash[:warning] = 'There was an error while trying to authenticate you...'
     end
     redirect_to root_path
-    # render text: request.env['omniauth.auth'].to_yaml
   end
 
   def destroy
