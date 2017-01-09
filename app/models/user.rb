@@ -6,7 +6,6 @@ class User < ApplicationRecord
       user.image_url = auth_hash['info']['image']
       user.url = auth_hash['info']['urls'][user.auth_provider.capitalize]
       user.save!
-      puts 'HELLELELEKNFJNDJFNJNJJNJNJNVJJV JD VJ '
       user
     end
   end

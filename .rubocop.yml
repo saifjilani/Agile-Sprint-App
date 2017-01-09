@@ -1,5 +1,9 @@
 Metrics/LineLength:
   Max: 120
+Metrics/AbcSize:
+  Max: 25
+MethodLength:
+  Max: 35
 Documentation:
   Enabled: false
 AllCops:
