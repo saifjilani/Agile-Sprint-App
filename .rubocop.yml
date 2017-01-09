@@ -1,8 +1,15 @@
 Metrics/LineLength:
   Max: 120
+Metrics/AbcSize:
+  Max: 25
+MethodLength:
+  Max: 35
 Documentation:
   Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
 AllCops:
+  TargetRubyVersion: 2.3
   Exclude:
     - 'db/schema.rb'
     - 'Gemfile'

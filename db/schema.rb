@@ -10,10 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170106175132) do
+ActiveRecord::Schema.define(version: 20170107052443) do
 
   create_table "features", force: :cascade do |t|
     t.integer  "sprint_id"
+    t.string   "title"
     t.integer  "rank",                      null: false
     t.decimal  "estimated_total_hours",     null: false
     t.decimal  "estimated_remaining_hours", null: false
@@ -29,6 +30,17 @@ ActiveRecord::Schema.define(version: 20170106175132) do
     t.date     "end_date",   null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "auth_provider", null: false
+    t.string   "uid",           null: false
+    t.string   "name"
+    t.string   "image_url"
+    t.string   "url"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["auth_provider", "uid"], name: "index_users_on_auth_provider_and_uid", unique: true
   end
 
 end

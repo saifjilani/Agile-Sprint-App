@@ -1,0 +1,8 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+regular_user:
+  auth_provider: provider
+  uid: 0000
+  name: regular_user
+  image_url: image.com
+  url: provider.com

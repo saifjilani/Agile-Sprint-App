@@ -29,7 +29,17 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+# Use rubocop as a static code analyzer
 gem 'rubocop', require: false
+# Use bootstrap-sass for styling
+gem 'bootstrap-sass'
+# Use Facebook omniauth for oauth login
+gem 'omniauth-facebook'
+# Use Google omniauth for oauth login
+gem 'omniauth-google-oauth2'
+# Use figaro to set environment variables
+gem 'figaro'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
