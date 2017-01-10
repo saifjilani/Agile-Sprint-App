@@ -36,7 +36,7 @@ class UserTest < ActiveSupport::TestCase
         image: 'http://graph.facebook.com/v2.6/12345/picture',
         urls: {
           Facebook: 'https://www.facebook.com/app_scoped_user_id/12345/'
-         }
+        }
       }
     }.with_indifferent_access
   end
