@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :sprint_users
+  has_many :sprints, through: :sprint_users
+
   class << self
     def find_by_provider_and_uid(provider:, uid:)
       User.find_by(auth_provider: provider, uid: uid)
