@@ -1,5 +1,7 @@
 <div class="intro-message">
   <h1>Plan Your Sprint</h1>
   <hr class="intro-divider">
-  <%= render 'login' %>
+  <% unless current_user %>
+    <%= render 'login' %>
+  <% end %>
 </div>
