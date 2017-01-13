@@ -1,9 +1,9 @@
 Metrics/LineLength:
   Max: 120
 Metrics/AbcSize:
-  Max: 25
+  Max: 20
 MethodLength:
-  Max: 35
+  Max: 20
 Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:

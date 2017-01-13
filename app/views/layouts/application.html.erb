@@ -1,34 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AgileSprintApp</title>
+    <title>Agile Sprint</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   </head>
 
   <body>
-    <nav class="navbar navbar-inverse">
-      <div class="container">
-        <div class="navbar-header">
-          <%= link_to 'Agile Sprint Chart', root_path, class: 'navbar-brand' %>
-        </div>
-        <div id="navbar">
-          <% if current_user %>
-            <ul class="nav navbar-nav pull-right">
-              <li><%= image_tag current_user.image_url, alt: current_user.name %></li>
-              <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
-            </ul>
-          <% else %>
-            <ul class="nav navbar-nav">
-               <li><%= link_to 'Facebook', '/auth/facebook' %></li>
-               <li><%= link_to 'Google+', '/auth/google' %></li>
-            </ul>
-          <% end %>
-        </div>
-      </div>
-    </nav>
+    <%= render 'shared/navbar' %>
 
     <div class="container">
       <% flash.each do |key, value| %>
