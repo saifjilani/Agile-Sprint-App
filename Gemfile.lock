@@ -45,6 +45,8 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bootstrap-social-rails (4.12.0)
+      railties (>= 3.1)
     builder (3.2.2)
     byebug (9.0.6)
     coffee-rails (4.2.1)
@@ -63,6 +65,8 @@ GEM
     ffi (1.9.14)
     figaro (1.1.1)
       thor (~> 0.14)
+    font-awesome-sass (4.7.0)
+      sass (>= 3.2)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hashie (3.4.6)
@@ -202,9 +206,11 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  bootstrap-social-rails
   byebug
   coffee-rails (~> 4.2)
   figaro
+  font-awesome-sass (~> 4.7.0)
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

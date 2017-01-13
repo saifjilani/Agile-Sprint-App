@@ -30,8 +30,11 @@ gem 'jbuilder', '~> 2.5'
 
 # Use rubocop as a static code analyzer
 gem 'rubocop', require: false
-# Use bootstrap-sass for styling
+# Use bootstrap for styling
 gem 'bootstrap-sass'
+gem 'bootstrap-social-rails'
+# Use font-awesome-sass for cool fonts and icons
+gem 'font-awesome-sass', '~> 4.7.0'
 # Use Facebook omniauth for oauth login
 gem 'omniauth-facebook'
 # Use Google omniauth for oauth login
