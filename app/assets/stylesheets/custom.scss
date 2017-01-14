@@ -27,6 +27,9 @@ h1 {
     color: #f8f8f8;
     background: url(/assets/track.jpeg) no-repeat center center;
     background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
 }
 
 .intro-message {
@@ -69,4 +72,27 @@ h1 {
     .intro-divider {
         width: 100%;
     }
+}
+
+.content-section-a {
+    padding: 50px 0;
+    text-align: center
+}
+
+.how-it-works-steps {
+    text-align: left;
+}
+
+footer {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+p.copyright {
+    margin: 15px 0 0;
+}
+
+.github-icon {
+    color: #000000;
 }
