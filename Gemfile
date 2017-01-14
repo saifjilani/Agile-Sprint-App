@@ -41,6 +41,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 # Use figaro to set environment variables
 gem 'figaro'
+# User rails-controller-testing for integration tests
+gem 'rails-controller-testing'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
