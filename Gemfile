@@ -30,14 +30,19 @@ gem 'jbuilder', '~> 2.5'
 
 # Use rubocop as a static code analyzer
 gem 'rubocop', require: false
-# Use bootstrap-sass for styling
+# Use bootstrap for styling
 gem 'bootstrap-sass'
+gem 'bootstrap-social-rails'
+# Use font-awesome-sass for cool fonts and icons
+gem 'font-awesome-sass', '~> 4.7.0'
 # Use Facebook omniauth for oauth login
 gem 'omniauth-facebook'
 # Use Google omniauth for oauth login
 gem 'omniauth-google-oauth2'
 # Use figaro to set environment variables
 gem 'figaro'
+# User rails-controller-testing for integration tests
+gem 'rails-controller-testing'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
