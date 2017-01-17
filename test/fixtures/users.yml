@@ -4,5 +4,6 @@ regular_user:
   auth_provider: provider
   uid: 0000
   name: regular_user
+  username: user_0000
   image_url: image.com
   url: provider.com
