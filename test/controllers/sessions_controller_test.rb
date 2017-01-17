@@ -1,8 +1,11 @@
 require 'test_helper'
 
 class SessionsControllerTest < ActionDispatch::IntegrationTest
-  test '#create should create a user' do
+  setup do
     OmniAuth.config.test_mode = true
+  end
+
+  test '#create should create a user' do
     assert_difference('User.count') do
       login(login_data)
       name = login_data[:data][:info][:name]
@@ -11,19 +14,16 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test '#create should create a session' do
-    OmniAuth.config.test_mode = true
     login(login_data)
     assert session[:user_id]
   end
 
   test '#create should redirect to root' do
-    OmniAuth.config.test_mode = true
     login(login_data)
     assert_redirected_to root_path
   end
 
   test '#destroy should clear the session' do
-    OmniAuth.config.test_mode = true
     login(login_data)
     assert session[:user_id]
     delete '/logout'
@@ -31,7 +31,6 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test '#destroy should redirect to home page' do
-    OmniAuth.config.test_mode = true
     login(login_data)
     delete '/logout'
     assert_equal 'See you!', flash[:success]
