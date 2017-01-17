@@ -1,0 +1,23 @@
+<p>
+  <strong>Auth Provider:</strong>
+  <%= @user.auth_provider %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Username:</strong>
+  <%= @user.username %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@user.image_url) %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', root_path %>
