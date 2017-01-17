@@ -25,6 +25,47 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test 'validates presence of auth_provider' do
+    user = users(:regular_user)
+    user.auth_provider = nil
+    refute user.valid?
+  end
+
+  test 'validates presence of uid' do
+    user = users(:regular_user)
+    user.uid = nil
+    refute user.valid?
+  end
+
+  test 'allows username to be nil' do
+    user = users(:regular_user)
+    user.username = nil
+    assert user.valid?
+  end
+
+  test 'validates uniqueness of username' do
+    duplicate_user = User.new
+    duplicate_user.auth_provider = 'blah'
+    duplicate_user.uid = 'blah'
+    assert duplicate_user.valid?
+
+    user = users(:regular_user)
+    duplicate_user.username = user.username
+    refute duplicate_user.valid?
+  end
+
+  test 'validates uniqueness of auth_provider and uid' do
+    duplicate_user = User.new
+    duplicate_user.auth_provider = 'blah'
+    duplicate_user.uid = 'blah'
+    assert duplicate_user.valid?
+
+    user = users(:regular_user)
+    duplicate_user.auth_provider = user.auth_provider
+    duplicate_user.uid = user.uid
+    refute duplicate_user.valid?
+  end
+
   private
 
   def auth_hash

@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   has_many :sprint_users
   has_many :sprints, through: :sprint_users
+  validates_presence_of :auth_provider, :uid
+  validates_uniqueness_of :username, allow_nil: true
+  validates_uniqueness_of :auth_provider, scope: :uid
 
   class << self
     def find_by_provider_and_uid(provider:, uid:)

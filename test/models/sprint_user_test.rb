@@ -12,4 +12,21 @@ class SprintUserTest < ActiveSupport::TestCase
     sprint_user = sprint_users(:regular_sprint_user)
     assert_equal user.id, sprint_user.user.id
   end
+
+  test 'is valid' do
+    sprint_user = sprint_users(:regular_sprint_user)
+    assert sprint_user.valid?
+  end
+
+  test 'validates belongs to Sprint' do
+    sprint_user = sprint_users(:regular_sprint_user)
+    sprint_user.sprint = nil
+    refute sprint_user.valid?
+  end
+
+  test 'validates belongs to User' do
+    sprint_user = sprint_users(:regular_sprint_user)
+    sprint_user.user = nil
+    refute sprint_user.valid?
+  end
 end
