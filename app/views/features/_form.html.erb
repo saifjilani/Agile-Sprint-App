@@ -3,10 +3,10 @@
     <div id="error_explanation">
       <h2>
         <%= pluralize(@feature.errors.count, "error") %> prohibited
-        this sprint from being saved:
+        this feature from being saved:
       </h2>
       <ul>
-        <% @sprint.errors.full_messages.each do |msg| %>
+        <% @feature.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>

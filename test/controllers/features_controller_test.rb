@@ -32,6 +32,7 @@ class FeaturesControllerTest < ActionDispatch::IntegrationTest
   test 'should create feature' do
     post user_sprint_features_url(@user, @sprint), params: { feature: feature_params }
     assert_redirected_to user_sprint_feature_url(id: feature_params[:id])
+
     feature = @sprint.features.find(feature_params[:id])
     assert_equal feature_params[:title], feature.title
     assert_equal feature_params[:rank], feature.rank
