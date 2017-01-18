@@ -17,6 +17,7 @@ class SprintsController < ApplicationController
 
   def create
     @sprint = user_sprints.create(sprint_params)
+
     if @sprint.valid?
       redirect_to user_sprint_path(id: @sprint.id)
     else

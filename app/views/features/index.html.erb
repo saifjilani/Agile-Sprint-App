@@ -1,0 +1,28 @@
+<h1>Listing features</h1>
+
+<%= link_to 'New feature', new_user_sprint_feature_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Rank</th>
+    <th>Estimated Total Hours</th>
+    <th>Estimated Remaining Hours</th>
+    <th>Actual Worked Hours</th>
+  </tr>
+
+  <% @feature.each do |feature| %>
+    <tr>
+      <td><%= feature.title %></td>
+      <td><%= feature.rank %></td>
+      <td><%= feature.estimated_total_hours %></td>
+      <td><%= feature.estimated_remaining_hours %></td>
+      <td><%= feature.actual_worked_hours %></td>
+      <td><%= link_to 'Show', user_sprint_feature_path(id: feature.id) %></td>
+      <td><%= link_to 'Edit', edit_user_sprint_feature_path(id: feature.id) %></td>
+      <td><%= link_to 'Destroy', user_sprint_feature_path(id: feature.id),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>

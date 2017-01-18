@@ -18,7 +18,6 @@ class SprintsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should get new sprint' do
-    sprint = @user.sprints.create(sprint_params)
     get new_user_sprint_url(@user)
     assert_response :success
   end
