@@ -30,7 +30,7 @@ class SprintsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create sprint' do
     post user_sprints_url(@user), params: { sprint: sprint_params }
-    assert_redirected_to user_sprint_path(id: sprint_params[:id])
+    assert_redirected_to user_sprint_url(id: sprint_params[:id])
 
     sprint = @user.sprints.find(sprint_params[:id])
     assert_equal sprint_params[:title], sprint.title
