@@ -1,0 +1,17 @@
+<p>
+  <strong>Title:</strong>
+  <%= @sprint.title %>
+</p>
+
+<p>
+  <strong>Start Date:</strong>
+  <%= @sprint.start_date %>
+</p>
+
+<p>
+  <strong>End Date:</strong>
+  <%= @sprint.end_date %>
+</p>
+
+<%= link_to 'Edit', edit_user_sprint_path(@sprint) %> |
+<%= link_to 'Back', user_sprints_path %>

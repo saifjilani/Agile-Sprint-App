@@ -1,6 +1,6 @@
 class Sprint < ApplicationRecord
-  has_many :features
-  has_many :sprint_users
+  has_many :features, dependent: :destroy
+  has_many :sprint_users, dependent: :destroy
   has_many :users, through: :sprint_users
 
   validates_associated :features

@@ -1,0 +1,24 @@
+<h1>Listing sprints</h1>
+
+<%= link_to 'New sprint', new_user_sprint_path %>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Start Date</th>
+    <th>End Date</th>
+  </tr>
+
+  <% @sprint.each do |sprint| %>
+    <tr>
+      <td><%= sprint.title %></td>
+      <td><%= sprint.start_date %></td>
+      <td><%= sprint.end_date %></td>
+      <td><%= link_to 'Show', user_sprint_path(id: sprint.id) %></td>
+      <td><%= link_to 'Edit', edit_user_sprint_path(id: sprint.id) %></td>
+      <td><%= link_to 'Destroy', user_sprint_path(id: sprint.id),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
