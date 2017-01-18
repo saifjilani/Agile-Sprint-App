@@ -50,5 +50,4 @@ class SprintsController < ApplicationController
   def sprint_params
     params.require(:sprint).permit(:id, :title, :start_date, :end_date)
   end
-
 end
