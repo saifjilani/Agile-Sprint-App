@@ -18,7 +18,6 @@ class SprintsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should get new sprint' do
-    sprint = @user.sprints.create(sprint_params)
     get new_user_sprint_url(@user)
     assert_response :success
   end
@@ -31,7 +30,7 @@ class SprintsControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create sprint' do
     post user_sprints_url(@user), params: { sprint: sprint_params }
-    assert_redirected_to user_sprint_path(id: sprint_params[:id])
+    assert_redirected_to user_sprint_url(id: sprint_params[:id])
 
     sprint = @user.sprints.find(sprint_params[:id])
     assert_equal sprint_params[:title], sprint.title

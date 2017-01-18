@@ -1,0 +1,44 @@
+<%= form_for :feature, url: url, method: method ||= nil do |f| %>
+  <% if @feature.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@feature.errors.count, "error") %> prohibited
+        this feature from being saved:
+      </h2>
+      <ul>
+        <% @feature.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <%= f.label :rank %><br>
+    <%= f.text_field :rank %>
+  </p>
+
+  <p>
+    <%= f.label :estimated_total_hours %><br>
+    <%= f.text_field :estimated_total_hours %>
+  </p>
+
+  <p>
+    <%= f.label :estimated_remaining_hours %><br>
+    <%= f.text_field :estimated_remaining_hours %>
+  </p>
+
+  <p>
+    <%= f.label :actual_worked_hours %><br>
+    <%= f.text_field :actual_worked_hours %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
