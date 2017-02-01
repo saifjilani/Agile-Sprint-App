@@ -20,12 +20,10 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   test 'should update user' do
     user = login(login_data)
     name = 'updated name'
-    username = 'updated_username'
-    patch user_path(user), params: { user: { name: name, username: username } }
+    patch user_path(user), params: { user: { name: name } }
     assert_redirected_to user
     user.reload
     assert_equal name, user.name
-    assert_equal username, user.username
   end
 
   test 'should destroy user' do

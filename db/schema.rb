@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170110000047) do
+ActiveRecord::Schema.define(version: 20170201200842) do
 
   create_table "features", force: :cascade do |t|
     t.integer  "sprint_id"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 20170110000047) do
     t.string   "auth_provider", null: false
     t.string   "uid",           null: false
     t.string   "name"
-    t.string   "username"
     t.string   "image_url"
     t.string   "url"
     t.datetime "created_at",    null: false
