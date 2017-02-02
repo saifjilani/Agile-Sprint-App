@@ -1,18 +1,23 @@
-<p>
-  <strong>Auth Provider:</strong>
-  <%= @user.auth_provider %>
-</p>
+<div class="dashboard-header">
+  <div class="container">
+    <div class='panel panel-primary'>
+      <div class='panel-heading'>
+        <h3 class='panel-title'>User Profile</h3>
+      </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+      <div class='panel-body'>
+        <ul class='list-group'>
+          <li class="list-group-item"> Name: <%= @user.name %> </li>
 
-<p>
-  <strong>Image:</strong>
-  <%= image_tag(@user.image_url) %>
-</p>
+          <li class="list-group-item"> Image: <%= image_tag @user.image_url, class: 'img-circle' %></li>
+      </ul>
 
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', root_path %>
+      <%= link_to 'Edit', edit_user_path(@user) %>
+      </div>
+    </div>
+    <!-- /.panel -->
+
+  </div>
+  <!-- /.container -->
+</div>

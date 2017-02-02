@@ -1,11 +1,16 @@
 <li class="dropdown">
   <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-    <i><%= image_tag current_user.image_url, alt: current_user.name %></i>
+    <i><%= image_tag current_user.image_url, class: 'img-circle', alt: current_user.name %></i>
     <i class="fa fa-caret-down"></i>
   </a>
   <ul class="dropdown-menu dropdown-user">
+    <li><%= link_to  dashboard_index_path do %>
+      <i class="fa fa-dashboard fa-fw"></i> Dashboard
+      <% end %>
+    </li>
+    <li class="divider"></li>
     <li>
-      <%= link_to edit_user_path(current_user.id) do %>
+      <%= link_to user_path(current_user.id) do %>
         <i class="fa fa-user fa-fw"></i> User Profile
       <% end %>
     </li>
