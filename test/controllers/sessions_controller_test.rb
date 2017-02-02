@@ -20,7 +20,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
 
   test '#create should redirect to root' do
     login(login_data)
-    assert_redirected_to root_path
+    assert_redirected_to dashboard_index_path
   end
 
   test '#destroy should clear the session' do

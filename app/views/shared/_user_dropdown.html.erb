@@ -1,0 +1,19 @@
+<li class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+    <i><%= image_tag current_user.image_url, alt: current_user.name %></i>
+    <i class="fa fa-caret-down"></i>
+  </a>
+  <ul class="dropdown-menu dropdown-user">
+    <li>
+      <%= link_to edit_user_path(current_user.id) do %>
+        <i class="fa fa-user fa-fw"></i> User Profile
+      <% end %>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <%= link_to logout_path, method: :delete do %>
+        <i class="fa fa-sign-out fa-fw"></i> Log Out
+      <% end %>
+    </li>
+  </ul>
+</li>
