@@ -7,6 +7,8 @@ class SessionsController < ApplicationController
       flash[:success] = "Welcome, #{@user.name}"
     rescue
       flash[:warning] = 'There was an error while trying to authenticate you...'
+      redirect_to root_path
+      return
     end
     redirect_to dashboard_index_path
   end

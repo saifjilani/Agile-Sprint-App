@@ -18,7 +18,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert session[:user_id]
   end
 
-  test '#create should redirect to root' do
+  test '#create should redirect to dasboard if success' do
     login(login_data)
     assert_redirected_to dashboard_index_path
   end
@@ -35,31 +35,5 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     delete '/logout'
     assert_equal 'See you!', flash[:success]
     assert_redirected_to root_path
-  end
-
-  private
-
-  def login_data
-    {
-      provider: 'facebook',
-      data: {
-        uid: '12345',
-        info: {
-          name: 'facebook user',
-          image: 'http://graph.facebook.com/v2.6/12345/picture',
-          urls: {
-            Facebook: 'https://www.facebook.com/app_scoped_user_id/12345/'
-          }
-        }
-      }
-    }
-  end
-
-  def login(mock_login)
-    provider = mock_login[:provider]
-    OmniAuth.config.add_mock(provider.to_sym, mock_login[:data])
-    get "/auth/#{provider}"
-    request.env['omniauth.env'] = OmniAuth.config.mock_auth[provider.to_sym]
-    get "/auth/#{provider}/callback"
   end
 end
