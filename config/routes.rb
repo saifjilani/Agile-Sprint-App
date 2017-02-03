@@ -10,4 +10,6 @@ Rails.application.routes.draw do
       resources :features
     end
   end
+
+  resources :dashboard, only: [:index]
 end

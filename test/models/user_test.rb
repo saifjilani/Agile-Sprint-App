@@ -37,23 +37,6 @@ class UserTest < ActiveSupport::TestCase
     refute user.valid?
   end
 
-  test 'allows username to be nil' do
-    user = users(:regular_user)
-    user.username = nil
-    assert user.valid?
-  end
-
-  test 'validates uniqueness of username' do
-    duplicate_user = User.new
-    duplicate_user.auth_provider = 'blah'
-    duplicate_user.uid = 'blah'
-    assert duplicate_user.valid?
-
-    user = users(:regular_user)
-    duplicate_user.username = user.username
-    refute duplicate_user.valid?
-  end
-
   test 'validates uniqueness of auth_provider and uid' do
     duplicate_user = User.new
     duplicate_user.auth_provider = 'blah'
