@@ -33,7 +33,7 @@ h1 {
 }
 
 .dashboard-header {
-    padding-top: 100px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-top: 100px;
     padding-bottom: 50px;
     background-size: cover;
     -webkit-background-size: cover;
@@ -108,4 +108,35 @@ p.copyright {
 
 .github-icon {
     color: #000000;
+}
+
+.sidebar .sidebar-nav.navbar-collapse {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar ul li {
+  border-bottom: 1px solid #e7e7e7;
+}
+.sidebar ul li a.active {
+  background-color: #eeeeee;
+}
+
+.sidebar .nav-second-level li {
+  border-bottom: none !important;
+}
+.sidebar .nav-second-level li a {
+  padding-left: 37px;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    z-index: 1;
+    width: 250px;
+  }
+.navbar-top-links .dropdown-messages,
+  .navbar-top-links .dropdown-tasks,
+  .navbar-top-links .dropdown-alerts {
+    margin-left: auto;
+  }
 }
