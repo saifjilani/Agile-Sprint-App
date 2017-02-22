@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   end
 
   resources :dashboard, only: [:index]
+  get '/chart', to: 'charts#index'
 end
